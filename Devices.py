@@ -109,17 +109,17 @@ class Garagedoor(Device):
     #attributes
 
         self.lock = 'enable'               #lock settings:[enable , disable`]
-        self.mode =  ''               #garagedoor mode opts : 
+        self.doorspeed =  'normal'               #garagedoor mode opts : ['fast' , 'normal' ,'slow']
 
 
     def updateStatus(self, status):
         self.status = status
     
     def updateLock(self , update):
-        self.mode = update
+        self.lock = update
     
-    def updateMode(self , update):
-        self.mode = update
+    def updateDoorspeed(self , update):
+        self.doorspeed = update
 
     #write preset func here
 
