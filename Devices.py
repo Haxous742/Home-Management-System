@@ -1,4 +1,5 @@
 import CSV_Handler as csvh
+import uuid                 #for unique id
 
 class Device:
 
@@ -8,15 +9,17 @@ class Device:
     def __init__(self ):
         pass
 
+    @staticmethod 
     def unique_device():
-        pass
+        return str(uuid.uuid4())
+        
 
 
 class Bulb(Device):
 
     def __init__(self ,name):
         self.name = name
-        self.device_id = 
+        self.device_id = Device.unique_device()
         self.type = "bulb"
         self.status = "on"
 
@@ -45,7 +48,7 @@ class Security_camera(Device):
 
     def __init__(self,name):
         self.name = name
-        self.device_id = ''
+        self.device_id = Device.unique_device()
         self.type = "Security_camera"
         self.status = "on"
 
@@ -72,7 +75,7 @@ class Thermostat(Device):
 
     def __init__(self,name):
         self.name = name
-        self.device_id = 
+        self.device_id = Device.unique_device()
         self.type = "Thermostat"
         self.status = "on"
 
@@ -99,7 +102,7 @@ class Garagedoor(Device):
 
     def __init__(self,name):
         self.name = name
-        self.device_id = 
+        self.device_id = Device.unique_device()
         self.type = "Gargedoor"
         self.status = "on"
 
