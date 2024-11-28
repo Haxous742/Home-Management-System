@@ -88,8 +88,8 @@ class Thermostat(Device):
     def updateStatus(self, status):
         self.status = status
     
-    def updateTempature(self , update):
-        self.Tempature = update
+    def updateTemperature(self , update):
+        self.Temperature = update
     
     def updateMode(self , update):
         self.Mode = update
@@ -108,7 +108,7 @@ class Garagedoor(Device):
 
     #attributes
 
-        self. =                 #Garagedoor settings : 
+        self.lock = 'enable'               #lock settings:[enable , disable`]
         self. =                 #garagedoor mode opts : 
 
 
