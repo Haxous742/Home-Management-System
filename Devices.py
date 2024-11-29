@@ -166,27 +166,73 @@ class Oven(Device):
     def updateMode(self , update):
         self.mode = update
 
+    def set_automation(self):
+        # Rule: Notify when cooking is finished
+        def condition():
+            return self.status == "off" and self.cooktime >= 0  # If oven is off and cooking time passed
+
+        def action():
+            print(f"{self.name}: Cooking is done! You can now take your food out.")
+            # You can add an actual notification here if needed.
+
+        self.add_automation_rule(condition, action)
+
 #automation
 
 class Refrigerator(Device):
-    def __init__(self,name):
-        super().__init__(name, "Refrigerator")
-    
-    def updateStatus(self, status):
+    def __init__(self, name):
+        super().__init__(name, "refrigerator")
+
+    def update_status(self, status):
+        """Updates the status of the refrigerator."""
         self.status = status
 
+
 class Fridge(Refrigerator):
-    self.temperature= 2                    #temp is an integer between 0-4 celsius
-    self.humidity="high"            #humid settings are [high humidity, low humidity]
-    def updateTemperature(self,update):
-        self.temperature=update
-    def updatehumidity(self,humidnew):
-        self.humidity=humidnew
+    def __init__(self, name):
+        super().__init__(name)
+        self.temperature = 3  # Default fridge temperature: 3°C
+        self.humidity = "high"  # Default humidity: high
+
+    def update_temperature(self, temp):
+        """Updates the fridge temperature."""
+        self.temperature = temp
+
+    def update_humidity(self, humidity):
+        """Updates the humidity setting of the fridge."""
+        self.humidity = humidity
+
+    def set_automation(self):
+        # Example Rule: Lower humidity at 6 PM
+        def condition():
+            return datetime.now().hour == 18  # Trigger at 6 PM
+
+        def action():
+            self.update_humidity("low")
+            print(f"{self.name}: Fridge humidity set to LOW.")
+
+        self.add_automation_rule(condition, action)
+
 
 class Freezer(Refrigerator):
-    self.temperature=2                 #temp is between(integer) -10 to 5 degrees celsius
-    def updatetemp(self,update):
-        self.temperature =update
+    def __init__(self, name):
+        super().__init__(name)
+        self.temperature = -18  # Default freezer temperature: -18°C
+
+    def update_temperature(self, temp):
+        """Updates the freezer temperature."""
+        self.temperature = temp
+
+    def set_automation(self):
+        # Example Rule: Reduce temperature at 10 PM
+        def condition():
+            return datetime.now().hour == 22  # Trigger at 10 PM
+
+        def action():
+            self.update_temperature(-20)  # Reduce freezer temperature
+            print(f"{self.name}: Freezer temperature set to -20°C.")
+
+        self.add_automation_rule(condition, action)
 
 
 class Charging_hub(Device):
@@ -214,7 +260,17 @@ class Charging_hub(Device):
             self.status='on'
         elif self.wattageused==0:
             self.status='off'
+
+    def set_automation(self):
+            # Example Rule: Turn off charging hub if no devices are connected
+            def condition():
+                return len(self.connected_devices) == 0
     
+            def action():
+                self.status = "off"
+                print(f"{self.name}: Charging Hub turned OFF.")
+    
+            self.add_automation_rule(condition, action)
 
 
 '''
