@@ -6,12 +6,12 @@ class Device:
     device_details = {}
      #format = {"device_id" : {"name" : <> , "type" : <>, "status" : <> , "attributes" :{"attribute1" : "status","attribute2":"status"}}}
 
-    def __init__(self ):
-        pass
-
-    @staticmethod 
-    def unique_device():
-        return str(uuid.uuid4())
+    def __init__(self , name , device_type ):
+        self.name = name
+        self.device_id = str(uuid.uuid4())
+        self.type = device_type
+        self.status = "on"
+        self.attributes = {}
 
     def status_report(self):
         pass
@@ -21,13 +21,9 @@ class Device:
 class Bulb(Device):
 
     def __init__(self ,name):
-        self.name = name
-        self.device_id = Device.unique_device()
-        self.type = "bulb"
-        self.status = "on"
+        super().__init__(name,"bulb")
 
         #attributes
-
         self.Brightness = 0
         self.Warmth = "Low"             #warmth options : [Low , Medium , High]
         self.Colour = "White"           #colour options : [White , Yellow , red , green ,blue]
@@ -50,10 +46,7 @@ class Bulb(Device):
 class Security_camera(Device):
 
     def __init__(self,name):
-        self.name = name
-        self.device_id = Device.unique_device()
-        self.type = "Security_camera"
-        self.status = "on"
+        super().__init__(name,"security_camera")
 
     #attributes
 
@@ -77,10 +70,7 @@ class Security_camera(Device):
 class Thermostat(Device):
 
     def __init__(self,name):
-        self.name = name
-        self.device_id = Device.unique_device()
-        self.type = "Thermostat"
-        self.status = "on"
+        super().__init__(name,"thermostat")
 
     #attributes
 
@@ -104,10 +94,7 @@ class Thermostat(Device):
 class Garagedoor(Device):
 
     def __init__(self,name):
-        self.name = name
-        self.device_id = Device.unique_device()
-        self.type = "Gargedoor"
-        self.status = "on"
+        super().__init__(name,"garagedoor")
 
     #attributes
 
