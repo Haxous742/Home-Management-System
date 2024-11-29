@@ -34,9 +34,9 @@ class Device:
 class Bulb(Device):
     def __init__(self, name):
         super().__init__(name, "bulb")
-        self.Brightness = 0
-        self.Warmth = "Low"  # Warmth options: [Low, Medium, High]
-        self.Colour = "White"  # Colour options: [White, Yellow, Red, Green, Blue]
+        self.Brightness = 50  #1-100
+        self.Warmth =  50 # Warmth options: 1-100
+        self.Colour = 50 # Colour options: 1-100
 
     def updateStatus(self, status):
         self.status = status
@@ -93,7 +93,7 @@ class Security_camera(Device):
 class Thermostat(Device):
     def __init__(self, name):
         super().__init__(name, "thermostat")
-        self.Temperature = 24  # Temperature settings: [int between 16 to 30]
+        self.Temperature = 24  # Temperature settings: [int between 16 to 40]
         self.Mode = "cool"  # Thermo mode options: [Heat, Cool, Fan]
 
     def updateStatus(self, status):
@@ -187,6 +187,33 @@ class Freezer(Refrigerator):
     self.temperature=2                 #temp is between(integer) -10 to 5 degrees celsius
     def updatetemp(self,update):
         self.temperature =update
+
+
+class Charging_hub(Device):
+    def __init__(self,name,number_of_ports,maxwattage):
+        super().__init__(name,'Charging_hub')
+        self.numberofports=number_of_ports
+        self.maxwattage=maxwattage                          #max power the hub can supply at once                              
+        self.connecteddevices=[]
+        self.wattageused=0                                 #power currently being supplied by hub
+
+    numconnecteddevices=0
+    
+    def connect_dev(self,dev_name,powerdrawnbydev):
+        if numconnecteddevices<=self.numberofports and self.wattageused+powerdrawnbydev<=self.maxwattage:
+            numconnecteddevices+=1
+            self.connecteddevices.append(dev_name)
+            self.wattageused+=powerdrawnbydev
+            self.updateStatus()
+
+        else:
+            pass        #have to print no more ports left or something
+    
+    def updateStatus(self):
+        if self.wattageused>0:
+            self.status='on'
+        elif self.wattageused==0:
+            self.status='off'
     
 
 
