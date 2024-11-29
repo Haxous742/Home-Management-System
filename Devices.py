@@ -12,6 +12,9 @@ class Device:
     @staticmethod 
     def unique_device():
         return str(uuid.uuid4())
+
+    def status_report(self):
+        pass
         
 
 
