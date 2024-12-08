@@ -1,4 +1,34 @@
 # Python_Project-Team-22
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+**Project Home Automation system**
+
+A home automation system that allows users to add and control various devices in their homes. They can automate their devices and generate system report for the devices. You can also add different section in a house .
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Commands to start the application**
+
+1. Ensure Python 3.x is installed.
+2. Run main.py using the following command :
+   ```
+   python main.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1.Please try to follow the naming convention to make it easier to integrate
 
 2.There are dictionary examples in the Test.py file
