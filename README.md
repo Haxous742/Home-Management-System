@@ -102,7 +102,7 @@ The Team
 
 |          Name                 | Roll Number |       Role                    |
 |-------------------------------|-------------|-------------------------------|
-| Vedant Mundada                | BT2024268   | GUI                           |
+| Vedant Mundada                | BT2024268   | GUI and Integration           |
 | Saarthak Singh                | IMT2024082  | Device class and system report|
 | Ravva Sai Sujay               | IMT2024086  | Login and singup page         |
 | Saanvi Choudhary              | BT2024223   | Houses class                  |
