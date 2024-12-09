@@ -100,13 +100,13 @@ pip install requests
 The Team
 --------
 
-|          Name                 | Roll Number |       Role       |
-|-------------------------------|-------------|------------------|
-| Vedant Mundada                | BT2024268   | GUI              |
-| Saarthak Singh                | IMT2024082  | Device class     |
-| Ravva Sai Sujay               | IMT2024086  |                  |
-| Saanvi Choudhary              | BT2024223   |                  |
-| Kaushiksai Yakkala            | BT2024240   |                  |
+|          Name                 | Roll Number |       Role                    |
+|-------------------------------|-------------|-------------------------------|
+| Vedant Mundada                | BT2024268   | GUI                           |
+| Saarthak Singh                | IMT2024082  | Device class and system report|
+| Ravva Sai Sujay               | IMT2024086  | Login and singup page         |
+| Saanvi Choudhary              | BT2024223   | Houses class                  |
+| Kaushiksai Yakkala            | BT2024240   | Devices subclass              |
 
 
 
