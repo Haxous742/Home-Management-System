@@ -1,26 +1,24 @@
 import tkinter as tk
-from UI import *
+from UI_ctk import *
 from CSV_Handler import CSV_Handler
 from Members import *
 from Houses import *
 from Devices import *
 
-root = tk.Tk()
+root = ctk.CTk()
 root.title("Home Management System")
-root.geometry("500x300")
-root.config(bg="#f5f5f5")
+root.geometry("400x300")
+root.configure(bg="#f4f5f7")
 
-DeviceObjs = Devices()
-Devices.Device_details = CSV_Handler.loadDevices()
 
-MemberObjs = Members()
-Members.Member_details = CSV_Handler.loadMembers()
+Device_details = CSV_Handler.loadDevices()
 
-HouseObjs = Houses()
-Houses.House_details = CSV_Handler.loadHouses()
+Member_details = CSV_Handler.loadMembers()
 
-GuiObj = GUI(root,MemberObjs,DeviceObjs,HouseObjs)
+House_details = CSV_Handler.loadHouses()
 
-GuiObj.login_page()
+GuiObj = GUI(root,Member_details,House_details,Device_details)
+
+GuiObj.show_home()
 
 root.mainloop()
