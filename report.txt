@@ -1,0 +1,2 @@
+Device report of all thermostat 
+The Device 2133 is off has the following attribute:  {'Temperature': '28', 'Mode': 'Heat'}
