@@ -1,16 +1,20 @@
-import uuid  # for unique id
+import CSV_Handler as csvh
+import uuid  
 from datetime import datetime
 
 
 class Device:
-    device_details = {}
+
+    device_details =  csvh.CSV_Handler.loadDevices()
+    #format = {"device_id" : {"name" : <> , "type" : <>, "status" : <> , "attributes" :{"attribute1" : "status","attribute2":"status"}}}
+
 
     def __init__(self, name, device_type):
         self.name = name
         self.device_id = str(uuid.uuid4())
         self.type = device_type
-        self.status = "on"
-        self.automation_rules = []  # Initialize the automation rules
+        self.status = "off"
+        self.automation_rules = []  
 
     def status_report(self):
         return {
@@ -37,20 +41,44 @@ class Bulb(Device):
         self.Brightness = 50  #1-100
         self.Warmth =  50 # Warmth options: 1-100
         self.Colour = 50 # Colour options: 1-100
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+
+    def update_id(self,id):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.device_id = id
 
     def updateStatus(self, status):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.status = status
+        Device.device_details[self.device_id]['status'] = status
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateBrightness(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.Brightness = update
+        Device.device_details[self.device_id]['attributes']['Brightness'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateWarmth(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.Warmth = update
+        Device.device_details[self.device_id]['attributes']['Warmth'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateColour(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()    
         self.Colour = update
+        Device.device_details[self.device_id]['attributes']['Colour'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
+    def updateName(self,name):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()      
+        self.name = name
+        Device.device_details[self.device_id]['name']= name 
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         # Example Rule: Turn on the bulb at 6:00 PM
         def condition():
             return datetime.now().hour == 18  # Check if it's 6:00 PM
@@ -64,20 +92,42 @@ class Bulb(Device):
 
 class Security_camera(Device):
     def __init__(self, name):
-        super().__init__(name, "security_camera")
-        self.Resolution = "FHD"  # Resolution options: [SD, HD, FHD]
-        self.Mode = "day"  # Mode options: ['day', 'night']
+        super().__init__(name, "cctv")
+        self.Resolution = "720"  # Resolution options: ["720p", "1080p", "4K", "8K"]
+        self.Mode = "Day"  # Mode options: ['day', 'night']
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+
+    def update_id(self,id):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.device_id = id        
 
     def updateStatus(self, status):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.status = status
+        Device.device_details[self.device_id]['status'] = status
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateResolution(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.Resolution = update
+        Device.device_details[self.device_id]['attributes']['Resolution'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+        
 
     def updateMode(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.Mode = update
+        Device.device_details[self.device_id]['attributes']['Mode'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
+    def updateName(self,name):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
+        self.name = name
+        Device.device_details[self.device_id]['name']= name 
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         # Rule: Change to night mode after 9 PM
         def condition():
             return datetime.now().hour >= 21  # After 9 PM
@@ -94,18 +144,40 @@ class Thermostat(Device):
     def __init__(self, name):
         super().__init__(name, "thermostat")
         self.Temperature = 24  # Temperature settings: [int between 16 to 40]
-        self.Mode = "cool"  # Thermo mode options: [Heat, Cool, Fan]
+        self.Mode = "Cool"  # Thermo mode options: [Heat, Cool, Fan]
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
+
+    def update_id(self,id):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
+        self.device_id = id
 
     def updateStatus(self, status):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.status = status
+        Device.device_details[self.device_id]['status'] = status
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateTemperature(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.Temperature = update
+        Device.device_details[self.device_id]['attributes']['Temperature'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def updateMode(self, update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
         self.Mode = update
+        Device.device_details[self.device_id]['attributes']['Mode'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
+    def updateName(self,name):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()        
+        self.name = name
+        Device.device_details[self.device_id]['name']= name 
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         # Rule: Adjust thermostat temperature based on outside temperature
         def condition():
             outside_temperature = 35  # Example hardcoded outside temperature
@@ -118,55 +190,52 @@ class Thermostat(Device):
         self.add_automation_rule(condition, action)
 
 
-class Garagedoor(Device):
-    def __init__(self, name):
-        super().__init__(name, "garagedoor")
-        self.lock = "enable"  # Lock settings: ['enable', 'disable']
-        self.doorspeed = "normal"  # Door speed options: ['fast', 'normal', 'slow']
-
-    def updateStatus(self, status):
-        self.status = status
-
-    def updateLock(self, update):
-        self.lock = update
-
-    def updateDoorspeed(self, update):
-        self.doorspeed = update
-
-    def set_automation(self):
-        # Rule: Open the garage door at 9 AM and 5 PM
-        def condition():
-            current_hour = datetime.now().hour
-            return current_hour == 9 or current_hour == 17  # 9 AM or 5 PM
-
-        def action():
-            self.updateStatus("open")  # Open the garage door
-            print(f"{self.name}: Garage door is now OPEN.")
-
-        self.add_automation_rule(condition, action)
-
-
 class Oven(Device):
     def __init__(self,name):
         super().__init__(name, "oven")
                 #attributes
-        self.mode="bake"                    # modes are['bake', 'broil', 'roast', 'toast']
+        self.mode="Bake"                    # modes are ["Preheat", "Boil", "Bake", "Air Fry","Defrost"]
         self.temperature=100                       #temp should be an integer between 50-300 degrees celsius
         self.cooktime=2                     #don't know if we should add this but if we do we need interval from 1 minute - 12 hours
-            
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+
+    def update_id(self,id):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.device_id = id
+
     def updateStatus(self, status):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.status = status
+        Device.device_details[self.device_id]['status'] = status
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+        
     
     def updateCooktime(self,time):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.cooktime=time
+        Device.device_details[self.device_id]['attributes']['Cooktime'] = time
+        csvh.CSV_Handler.updateDevices(Device.device_details)
     
     def updateTemperature(self , update):
-        self.Temperature = update
-    
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.temperature = update
+        Device.device_details[self.device_id]['attributes']['Temperature'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
     def updateMode(self , update):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         self.mode = update
+        Device.device_details[self.device_id]['attributes']['Mode'] = update
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
+    def updateName(self,name):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.name = name
+        Device.device_details[self.device_id]['name'] = name 
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         # Rule: Notify when cooking is finished
         def condition():
             return self.status == "off" and self.cooktime >= 0  # If oven is off and cooking time passed
@@ -177,32 +246,59 @@ class Oven(Device):
 
         self.add_automation_rule(condition, action)
 
-#automation
 
 class Refrigerator(Device):
-    def __init__(self, name):
-        super().__init__(name, "refrigerator")
 
-    def update_status(self, status):
+    def __init__(self, name):
+        super().__init__(name, "fridge")
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+
+    def make_objs(self):
+        self.Fridgeobj = Fridge(self.device_id)
+        self.Freezerobj = Freezer(self.device_id)
+
+    def update_id(self,id):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.device_id = id
+
+    def updateStatus(self, status):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         """Updates the status of the refrigerator."""
         self.status = status
+        Device.device_details[self.device_id]['status'] = status
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+
+    def update_name(self,name):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
+        self.name = name
+        Device.device_details[self.device_id]['name'] = name 
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
 
 class Fridge(Refrigerator):
-    def __init__(self, name):
-        super().__init__(name)
+    def __init__(self,id):
         self.temperature = 3  # Default fridge temperature: 3°C
-        self.humidity = "high"  # Default humidity: high
+        self.humidity = "High"  # Default humidity: high , medium , low
+        self.id = id
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
 
     def update_temperature(self, temp):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         """Updates the fridge temperature."""
         self.temperature = temp
+        Device.device_details[self.id]['attributes']['Fridge_Temperature'] = temp
+        csvh.CSV_Handler.updateDevices(Device.device_details)
+ 
 
     def update_humidity(self, humidity):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         """Updates the humidity setting of the fridge."""
         self.humidity = humidity
+        Device.device_details[self.id]['attributes']['Fridge_humidity'] = humidity
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         # Example Rule: Lower humidity at 6 PM
         def condition():
             return datetime.now().hour == 18  # Trigger at 6 PM
@@ -215,15 +311,21 @@ class Fridge(Refrigerator):
 
 
 class Freezer(Refrigerator):
-    def __init__(self, name):
-        super().__init__(name)
+
+    def __init__(self,id):
         self.temperature = -18  # Default freezer temperature: -18°C
+        self.id = id
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
 
     def update_temperature(self, temp):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         """Updates the freezer temperature."""
         self.temperature = temp
+        Device.device_details[self.id]['attributes']['Freezer_Temperature'] = temp
+        csvh.CSV_Handler.updateDevices(Device.device_details)
 
     def set_automation(self):
+        Device.device_details =  csvh.CSV_Handler.loadDevices()
         # Example Rule: Reduce temperature at 10 PM
         def condition():
             return datetime.now().hour == 22  # Trigger at 10 PM
@@ -233,76 +335,3 @@ class Freezer(Refrigerator):
             print(f"{self.name}: Freezer temperature set to -20°C.")
 
         self.add_automation_rule(condition, action)
-
-
-class Charging_hub(Device):
-    def __init__(self,name,number_of_ports,maxwattage):
-        super().__init__(name,'Charging_hub')
-        self.numberofports=number_of_ports
-        self.maxwattage=maxwattage                          #max power the hub can supply at once                              
-        self.connecteddevices=[]
-        self.wattageused=0                                 #power currently being supplied by hub
-
-    numconnecteddevices=0
-    
-    def connect_dev(self,dev_name,powerdrawnbydev):
-        if numconnecteddevices<=self.numberofports and self.wattageused+powerdrawnbydev<=self.maxwattage:
-            numconnecteddevices+=1
-            self.connecteddevices.append(dev_name)
-            self.wattageused+=powerdrawnbydev
-            self.updateStatus()
-
-        else:
-            pass        #have to print no more ports left or something
-    
-    def updateStatus(self):
-        if self.wattageused>0:
-            self.status='on'
-        elif self.wattageused==0:
-            self.status='off'
-
-    def set_automation(self):
-            # Example Rule: Turn off charging hub if no devices are connected
-            def condition():
-                return len(self.connected_devices) == 0
-    
-            def action():
-                self.status = "off"
-                print(f"{self.name}: Charging Hub turned OFF.")
-    
-            self.add_automation_rule(condition, action)
-
-
-'''
-# Test cases
-if __name__ == "__main__":
-    # Create device instances
-    bulb = Bulb("Living Room Bulb")
-    camera = Security_camera("Front Door Camera")
-    thermostat = Thermostat("Home Thermostat")
-    garage = Garagedoor("Main Garage Door")
-
-    # Set automation rules
-    bulb.set_automation()
-    camera.set_automation()
-    thermostat.set_automation()
-    garage.set_automation()
-
-    # Apply automation rules (Simulate at specific times)
-    print("\n--- Testing Automation Rules ---")
-    bulb.apply_rules()
-    camera.apply_rules()
-    thermostat.apply_rules()
-    garage.apply_rules()
-
-    # Status reports
-    print("\n--- Device Status Reports ---")
-    print(bulb.status_report())
-    print(camera.status_report())
-    print(thermostat.status_report())
-    print(garage.status_report())
-'''
-
-
-
-
