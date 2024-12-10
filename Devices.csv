@@ -1,1 +1,75 @@
-
+6f31282b-03e5-4c9b-9bb2-ee2665e8d426,thermo,thermostat,on,Temperature_24,Mode_Cool
+e732b37a-6223-45b7-bc96-77724396ae68,123,bulb,on,Brightness_50,Warmth_50,Colour_50
+130c0035-d919-42e1-9ffa-690756dc97ea,1233,thermostat,on,Temperature_24,Mode_Cool
+59139e9d-5081-4ab4-8653-cd76459bf953,eeererer,security_camera,on,Resolution_720,Mode_Day
+b97aa0e4-335a-4407-95d3-79d24773bbfe,cctv_01,cctv,on,Resolution_720,Mode_Day
+bac4b322-07a8-4296-9c30-fa0f7388b903,Bulb_lol,bulb,on,Brightness_50,Warmth_50,Colour_50
+84660875-30cb-4eb3-ad96-7cffef2c80db,Bathroom_cctv,cctv,on,Resolution_720,Mode_Day
+0a452252-8e24-46d4-a89b-9e27f018ca8d,bath_cctv,cctv,on,Resolution_720,Mode_Day
+e682ace4-4fbf-47ba-ac12-a8173a244256,cctv_01,cctv,on,Resolution_720,Mode_Day
+cbddc2bf-4b3f-48da-bec8-fe1bbbb6c107,Fridge_01,fridge,on,Fridge_humidity
+1c055a00-ca34-434b-b2a3-43804d37160f,Bathroom_01,cctv,on,Resolution_720,Mode_Day
+e08023ee-5ec8-42b3-93d2-ca50f8fab368,Bulb_01,bulb,on,Brightness_50,Warmth_50,Colour_50
+548a0b0f-53f3-4b65-ba21-f21073a84f41,hrife,fridge,on,Fridge_humidity
+31c6a4d5-3bc4-41e3-8a85-1eddfda24896,g hnbv,bulb,on,Brightness_50,Warmth_50,Colour_50
+04cb6d77-fbf9-4490-bc8f-e292141ed8b3,gnf v,bulb,on,Brightness_50,Warmth_50,Colour_50
+904b4804-b2e1-4b8c-bed0-8d50f358b6fa,davfsx cv ,oven,on,Cooktime_2,Temperature_100,Mode_Bake
+165a241b-8147-4cfb-a3b9-da0d571e83cf,xv,bulb,on,Brightness_50,Warmth_50,Colour_50
+ddc3c480-5244-4ea6-8900-fe857635892c,nsrmhvb,thermostat,on,Temperature_24,Mode_Cool
+14979455-5313-4343-8a4d-797eacb2ff7f,sfhdgnv ,thermostat,on,Temperature_24,Mode_Cool
+07b558d9-0067-4627-a1aa-79a921b56639,hjgmb ,thermostat,on,Temperature_24,Mode_Cool
+0d4deb2b-ed13-42fb-bf0a-620f8eb5775f,hnv ,thermostat,on,Temperature_24,Mode_Cool
+2b07aa8f-96ad-4b23-b6e7-2938d239c862, b,cctv,on,Resolution_720,Mode_Day
+d9a816b1-7ed3-4201-b6f7-0d38e46cd8a7,srgtdhjfgjmb ,oven,on,Cooktime_2,Temperature_100,Mode_Bake
+45619055-8935-45b5-b579-e942fdb4d93d,hdjmgb ,cctv,on,Resolution_720,Mode_Day
+25820900-23cc-4e3e-838b-9ef56581ebc3,arersdfh mjbm,thermostat,on,Temperature_24,Mode_Cool
+fc539374-8012-4900-9355-ffe192ac0e0b,hgjmb,cctv,on,Resolution_720,Mode_Day
+f71443a4-8c52-4a44-814c-efd04fb3dfd4,01,cctv,on,Resolution_720,Mode_Day
+46acbf35-0533-4a78-9501-026c1e4aa313,2324,oven,on,Cooktime_2,Temperature_100,Mode_Bake
+c3e6378d-5ce4-4da3-a452-e89d356817a2,wewe,cctv,on,Resolution_720,Mode_Day
+0ad32f0e-2c6d-4054-8faf-fba745a0faba,123,thermostat,on,Temperature_24,Mode_Cool
+6ec9d192-c2e1-4806-bfc2-34b485d7e8ae,123,cctv,on,Resolution_720,Mode_Day
+fe65468f-5a9c-4635-a11d-4995e90dfdb5,123,fridge,on,Fridge_humidity
+51f1b301-7f5c-4a91-85f0-4232d7f13b86,232,fridge,on,Fridge_humidity
+3cee3cdb-4268-499c-83b1-1bcb2437f317,123,oven,on,Cooktime_2,Temperature_100,Mode_Bake
+16c1a09a-30d9-407a-8a4a-f9f63b91d58d,123,fridge,on,Fridge_humidity
+5fe0f85b-a31e-43d2-a7b9-a66b993dd6ae,23,fridge,on,Fridge_humidity
+41223889-f052-489a-baa1-62df3f09ef07,22,fridge,on,Fridge_humidity
+497e50cb-a412-46a9-bcac-26a29be05403,ede,cctv,on,Resolution_720,Mode_Day
+6598aeea-aa42-44dc-819d-8ef15eb89dc8,123,oven,on,Cooktime_2,Temperature_100,Mode_Bake
+80066804-0caf-42f3-ae9a-6d81de431042,123,cctv,on,Resolution_720,Mode_Day
+bfdb2e08-fc36-4fc5-b790-9ddbdd79c3f2,123,fridge,on,Fridge_humidity
+5113db73-4694-4894-9d03-b6d431c71abc,sws,cctv,on,Resolution_720,Mode_Day
+93691ef8-43c9-468f-9018-f2f43e6b4d62,wws,thermostat,on,Temperature_24,Mode_Cool
+a5f93e69-c0c6-4c81-b550-cc4a23a6c83c,wer,fridge,on,Fridge_humidity
+834deb09-68d7-4f56-b7d2-70e87f8c2c54,ded,thermostat,on,Temperature_24,Mode_Cool
+46a97009-c9fb-4d63-a21a-0132978f5cd8,233,fridge,on,Fridge_humidity
+95c78c4e-2d7c-499c-bf56-963d8ae6656f,123,oven,on,Cooktime_2,Temperature_180,Mode_Bake
+fd4db1c9-6738-4e58-b959-25e338be727c,123322,fridge,on,Fridge_humidity
+ebbf065e-6138-41ef-88ae-719c649a7a37,cctv_01,cctv,on,Resolution_8K,Mode_Day
+3e9e7a4d-3569-4c55-83cc-960dd78cab5a,231,oven,off,Cooktime_2,Temperature_100,Mode_Bake
+772fca98-6f9b-4c85-8dfe-a494e2d8686d,34324,fridge,off,Fridge_humidity
+7c548275-8bbb-4461-bd5d-da7101f228f4,234,oven,off,Cooktime_2,Temperature_100,Mode_Bake
+b2d1ade1-214f-4dab-8b6d-5414438f2c52,234,thermostat,off,Temperature_24,Mode_Cool
+9691509c-f938-4545-9d22-28e4b3673549,er,bulb,off,Brightness_50,Warmth_50,Colour_50
+2d7cc566-726e-4a1a-9985-e02cdd53e7fb,ereree,bulb,off,Brightness_50,Warmth_50,Colour_50
+defd12f4-d0d2-4fed-8b89-29c27a4ae4f6,good,bulb,off,Brightness_50,Warmth_50,Colour_50
+a75deb0f-eb9b-4130-9f87-0b220c8f5a39,wewe,thermostat,off,Temperature_24,Mode_Cool
+196f5a6f-a90c-4954-a26b-3431babe1aec,wewe,thermostat,off,Temperature_24,Mode_Cool
+ce123979-a168-42ce-8266-29d4296b77e7,cctv_01,cctv,off,Resolution_720,Mode_Day
+d082b653-33a9-4ae3-a7b9-c5856c0d796d,Bulb_01,bulb,off,Brightness_50,Warmth_50,Colour_50
+f0b9b35f-97eb-4363-add8-6b30560ccc5e,Wed,thermostat,off,Temperature_32,Mode_Fan
+fb4619c7-4f66-467f-b2ce-41ce62420e44,cctv_01,cctv,off,Resolution_720,Mode_Day
+8b4e9f03-e9a6-4c5c-8f65-052e37545955,Bulb_02,bulb,off,Brightness_50,Warmth_50,Colour_50
+3a89118d-0567-4f45-a662-894fb979eaad,Oven_01,oven,off,Cooktime_2,Temperature_100,Mode_Bake
+13401679-e45f-498a-8976-41fd34a856de,Fridge_01,fridge,off,Fridge_humidity
+419f237d-4a6d-43c2-9e4c-7037193cd247,1212,cctv,off,Resolution_1080p,Mode_Night
+4d5339d3-83a9-4ad5-90dc-59fba241e6a7,123,cctv,off,Resolution_4K,Mode_Night
+c4d7e846-a72e-49f1-85aa-0a9b6524a9fa,qwewe,bulb,on,Brightness_79,Warmth_71,Colour_84
+338613e5-c2c5-490e-8485-e26e776178b7,2133,thermostat,on,Temperature_28,Mode_Heat
+109230cd-2a8f-45c4-a36e-61508839aac1,123,oven,on,Cooktime_2,Temperature_217,Mode_Bake
+6dee10ac-e8e6-4d91-846a-fb73a25525c3,2323,fridge,on,Fridge_humidity,Freezer_Temperature
+a48c9ddc-8185-4fba-b97c-4b1b4579e2c5,123,cctv,on,Resolution_4K,Mode_Night
+6a5d9dce-9dcf-4d43-9296-b07d668e13b1,232,thermostat,off,Temperature_24,Mode_Cool
+1f40d6a9-58e8-4908-8414-8e9b15fbd49d,fridge_01,fridge,off,Fridge_Temperature_3,Fridge_humidity_High
+b95e92b8-444d-46a8-bb0b-ab46aadf3148,fridge_02,fridge,off,Fridge_Temperature_3,Fridge_humidity_High
