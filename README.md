@@ -45,7 +45,7 @@ pip install requests
 **Features Implemented**
 
 1. Login and signup Page : A secure interface for users to create accounts and log in to the system.
-    <img width="414" alt="Screenshot 2024-12-09 at 10 24 51 AM" src="https://github.com/user-attachments/assets/b3885820-5bce-405a-8273-1c2c125b8e27">
+<img width="414" alt="Screenshot 2024-12-09 at 10 24 51 AM" src="https://github.com/user-attachments/assets/b3885820-5bce-405a-8273-1c2c125b8e27">
 <img width="402" alt="Screenshot 2024-12-09 at 10 24 31 AM" src="https://github.com/user-attachments/assets/fd15d10b-deae-4372-83cb-48e491bfba33">
 
 
@@ -59,7 +59,7 @@ pip install requests
 
 
 5. Filter Devices by Section : Easily filter and view devices based on the section they belong to for quick navigation.
-   <img width="403" alt="Screenshot 2024-12-09 at 11 09 54 AM" src="https://github.com/user-attachments/assets/c2a479bd-76c7-464d-98cd-8be8cc53746b">
+<img width="403" alt="Screenshot 2024-12-09 at 11 09 54 AM" src="https://github.com/user-attachments/assets/c2a479bd-76c7-464d-98cd-8be8cc53746b">
 
 
 7. Generate System Reports : Generate detailed system reports in .txt format for a particular device type, providing comprehensive insights.
