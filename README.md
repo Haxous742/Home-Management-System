@@ -45,24 +45,33 @@ pip install requests
 **Features Implemented**
 
 1. Login and signup Page : A secure interface for users to create accounts and log in to the system.
+
 <img width="414" alt="Screenshot 2024-12-09 at 10 24 51 AM" src="https://github.com/user-attachments/assets/b3885820-5bce-405a-8273-1c2c125b8e27">
+
 <img width="402" alt="Screenshot 2024-12-09 at 10 24 31 AM" src="https://github.com/user-attachments/assets/fd15d10b-deae-4372-83cb-48e491bfba33">
 
+2. Add Sections : Users can create and manage different sections of a house, such as bedrooms or Living room.
 
-2. Add Sections : Users can create and manage different sections of a house, such as bedrooms or Living room.<img width="408" alt="Screenshot 2024-12-09 at 10 25 16 AM" src="https://github.com/user-attachments/assets/28a31f05-2f5d-4e25-abce-365ba6af18a4">
-   
-3. Add Devices : New Devices like bulb , cctv , thermostat, etc can be added to specific sections. <img width="400" alt="Screenshot 2024-12-09 at 10 25 48 AM" src="https://github.com/user-attachments/assets/ae426d53-2c3c-4a7b-a6cf-7ef86a18d3fb"><img width="772" alt="Screenshot 2024-12-09 at 11 09 04 AM" src="https://github.com/user-attachments/assets/48b1dbb8-7360-493b-909c-29adea819d0a">
+<img width="408" alt="Screenshot 2024-12-09 at 10 25 16 AM" src="https://github.com/user-attachments/assets/28a31f05-2f5d-4e25-abce-365ba6af18a4">
 
+3. Add Devices : New Devices like bulb , cctv , thermostat, etc can be added to specific sections. 
 
-4. View Device Settings : Access and modify the settings of each individual device from the home page. <img width="515" alt="Screenshot 2024-12-09 at 10 26 48 AM" src="https://github.com/user-attachments/assets/8da24056-c7b1-4338-b136-a2d654f8b4c1">
+<img width="400" alt="Screenshot 2024-12-09 at 10 25 48 AM" src="https://github.com/user-attachments/assets/ae426d53-2c3c-4a7b-a6cf-7ef86a18d3fb">
+
+<img width="772" alt="Screenshot 2024-12-09 at 11 09 04 AM" src="https://github.com/user-attachments/assets/48b1dbb8-7360-493b-909c-29adea819d0a">
+
+4. View Device Settings : Access and modify the settings of each individual device from the home page.
+
+<img width="515" alt="Screenshot 2024-12-09 at 10 26 48 AM" src="https://github.com/user-attachments/assets/8da24056-c7b1-4338-b136-a2d654f8b4c1">
+ 
 <img width="513" alt="Screenshot 2024-12-09 at 10 26 18 AM" src="https://github.com/user-attachments/assets/b4bbba05-0da8-4ec6-b61c-5b9d17ac7ed6">
 
-
 5. Filter Devices by Section : Easily filter and view devices based on the section they belong to for quick navigation.
+
 <img width="403" alt="Screenshot 2024-12-09 at 11 09 54 AM" src="https://github.com/user-attachments/assets/c2a479bd-76c7-464d-98cd-8be8cc53746b">
 
+6. Generate System Reports : Generate detailed system reports in .txt format for a particular device type, providing comprehensive insights.
 
-7. Generate System Reports : Generate detailed system reports in .txt format for a particular device type, providing comprehensive insights.
 <img width="1084" alt="Screenshot 2024-12-09 at 11 09 37 AM" src="https://github.com/user-attachments/assets/b000b97d-eb01-4c05-a46d-a5186a83afb1">
 
 
